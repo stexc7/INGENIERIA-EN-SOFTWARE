@@ -1,1 +1,25 @@
-Trabajando en la logica del proyecto
+Trabajando en la logica del Proyecto
+
+
+--- Avance de Allan ---
+Código de la calculadora con validación de números y división por cero:
+
+def calculadora():
+    try:
+        num1 = float(input("Ingresa el primer número: "))
+        num2 = float(input("Ingresa el segundo número: "))
+    except ValueError:
+        print("Error: ¡Debes ingresar un número válido!")
+        return
+
+    print("1. Suma | 2. Resta | 3. Multiplicación | 4. División")
+    opcion = input("Elige una opción: ")
+
+    if opcion == '1': print(f"Resultado: {num1 + num2}")
+    elif opcion == '2': print(f"Resultado: {num1 - num2}")
+    elif opcion == '3': print(f"Resultado: {num1 * num2}")
+    elif opcion == '4':
+        if num2 == 0:
+            print(" Error: No se puede dividir entre cero.")
+        else:
+            print(f"Resultado: {num1 / num2}")
